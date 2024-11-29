@@ -2,6 +2,7 @@ import React from 'react';
 import Logo from "../../assets/logo.png";
 import { IoMdSearch } from "react-icons/io";
 import { FaBlogger } from 'react-icons/fa6';
+import { FaCaretDown } from 'react-icons/fa';
 import DarkMode from "./DarkMode";
 
 const Menu = [
@@ -88,6 +89,20 @@ const Navbar = () => {
                         </li>
                     ))}
                     {/* simple dropdown and links*/}
+                    <li>
+                        <a
+                            href='#'
+                            className='flex items-center gap-[2px] py-2'
+                        >
+                            Top Recipe
+                            <span>
+                                <FaCaretDown
+                                    className="transition-all
+                             duration-200
+                             group-hover:rotate-180" />
+                            </span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>

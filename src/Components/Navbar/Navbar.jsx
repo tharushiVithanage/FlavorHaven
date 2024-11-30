@@ -27,6 +27,34 @@ const Menu = [
         link: "/#YourRecipe",
     }
 ];
+const DropdownLinks = [
+    {
+        id: 1,
+        name: "Breakfast Foods",
+        link: "/#",
+    },
+    {
+        id: 2,
+        name: "Lunch Foods",
+        link: "/#",
+    },
+    {
+        id: 3,
+        name: "Dinner Foods",
+        link: "/#",
+    },
+    {
+        id: 4,
+        name: "Drinks",
+        link: "/#",
+    },
+    {
+        id: 5,
+        name: "Desert",
+        link: "/#",
+    },
+];
+
 
 const Navbar = () => {
     return (
@@ -51,7 +79,10 @@ const Navbar = () => {
                                 duration-300 rounded-full border
                                 border-gray-300 px-2 py-1 
                                 focus:outline-none focus:border-1
-                                focus:border-primary'
+                                focus:border-primary
+                                dark:border-gray-500
+                                dark:bg-gray-800'
+
                             />
                             <IoMdSearch
                                 className='text-gray-50 group-hover:text-primary absolute top-1/2 -translate-y-1/2 right-3'
@@ -89,7 +120,7 @@ const Navbar = () => {
                         </li>
                     ))}
                     {/* simple dropdown and links*/}
-                    <li>
+                    <li className='group relative cursor-pointer'>
                         <a
                             href='#'
                             className='flex items-center gap-[2px] py-2'
@@ -102,6 +133,18 @@ const Navbar = () => {
                              group-hover:rotate-180" />
                             </span>
                         </a>
+                        <div className='absolute z-[9999] hidden group-hover:block w-[200px] rounded-md bg-white p-2 text-black shadow-md'>
+                            <ul>
+                                {DropdownLinks.map((data) => (
+                                    <li key={data.id}>
+                                        <a href={data.link}
+                                            className='inline-block w-full rounded-md p-2 hover:bg-primary/20 '
+                                        >{data.name}</a>
+                                    </li>
+                                ))}
+
+                            </ul>
+                        </div>
                     </li>
                 </ul>
             </div>

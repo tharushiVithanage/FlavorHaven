@@ -30,11 +30,11 @@ const Hero = () => {
     dots: false,
     arrows: false,
     infinite: true,
-    speed: 800,
+    speed: 1000,
     slidesToScroll: 1,
     autoplay: true,
     autopalySpeed: 4000,
-    cssEase: false,
+    cssEase: "linear",
     pasueOnFocus: true,
 
   };
@@ -57,7 +57,10 @@ const Hero = () => {
                     {data.title}
                   </h1>
 
-                  <p className='text-sm'>At FlavorHaven, dining is more than a meal; it's an unforgettable experience. Step into a world of culinary excellence where passion meets perfection in every dish. Whether you’re here for a quick bite, a family gathering, or a special celebration, we promise to make your moments extraordinary.</p>
+                  <p className='text-sm' style={{ fontFamily: 'Poppins, sans-serif' }}>
+                    At FlavorHaven, dining is more than a meal; it's an unforgettable experience. Step into a world of culinary excellence where passion meets perfection in every dish. Whether you’re here for a quick bite, a family gathering, or a special celebration, we promise to make your moments extraordinary.
+                  </p>
+
                   <div>
                     <button
                       className='bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 tesxt-white py-2 px-4 rounded-full'

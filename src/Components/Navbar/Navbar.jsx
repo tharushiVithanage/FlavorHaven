@@ -30,27 +30,17 @@ const Menu = [
 const DropdownLinks = [
     {
         id: 1,
-        name: "Breakfast Foods",
+        name: "specials",
         link: "/#",
     },
     {
         id: 2,
-        name: "Lunch Foods",
-        link: "/#",
-    },
-    {
-        id: 3,
-        name: "Dinner Foods",
-        link: "/#",
-    },
-    {
-        id: 4,
         name: "Drinks",
         link: "/#",
     },
     {
-        id: 5,
-        name: "Desert",
+        id: 3,
+        name: "Deserts",
         link: "/#",
     },
 ];

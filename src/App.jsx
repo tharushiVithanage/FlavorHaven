@@ -6,27 +6,31 @@ import TopItem from './Components/Foods/TopItem';
 import Aos from 'aos';
 import "aos/dist/aos.css";
 import Drink from './Components/Foods/Drink';
+import Desert from './Components/Foods/Desert';
+
 
 
 const App = () => {
-  React.useEffect(()=>{
+  React.useEffect(() => {
     Aos.init({
       offset: 100,
       duration: 800,
       easing: "ease-in-sine",
       delay: 100,
-  });
- 
- 
-  Aos.refresh();
-},[]);
+    });
+
+
+    Aos.refresh();
+  }, []);
   return (
     <div>
       <Navbar />
-      <Hero/>
+      <Hero />
       <TopItem />
-      <Drink/>
-    
+      <Drink />
+      <Desert />
+
+
     </div>
   )
 }

@@ -17,13 +17,13 @@ const BreakfastData = [
         id: 2,
         img: Image2,
         title: "Crispy Chicken",
-        description: "Our Crispy Chicken is perfectly seasoned and fried to golden perfection, offering a juicy, tender bite with a satisfying crunch. Made with premium cuts of chicken, coated in a special blend of spices, it’s a treat you won’t want to miss. Pair it with your favorite dips and sides for the ultimate experience!",
+        description: "Our Crispy Chicken is perfectly seasoned and fried to golden perfection, offering a juicy. Made with premium cuts of chicken, coated in a special blend of spices, it’s a treat you won’t want to miss. Pair it with your favorite dips and sides for the ultimate experience!",
     },
     {
         id: 3,
         img: Image3,
         title: "Koththu",
-        description: "Kottu, Sri Lanka's favorite street food, is a delicious mix of chopped flatbread stir-fried with vegetables, eggs, and your choice of chicken, beef, or seafood. Infused with aromatic spices and served piping hot, every bite bursts with flavor and texture. Perfect for a hearty and satisfying meal!",
+        description: "Kottu, Sri Lanka's favorite street food, is a delicious mix of chopped flatbread stir-fried with your choice . Infused with aromatic spices and served piping hot, every bite bursts with flavor and texture. Perfect for a hearty and satisfying meal!",
     },
     {
         id: 4,
@@ -52,7 +52,7 @@ const TopItem = () => {
                 {/* Header section */}
                 <div className='text-center mb-10 max-w-[600px] mx-auto'>
                     <p data-aos="fade-up" className='text-xl font-serif text-primary'>
-                        Start Your Day Right Delicious Breakfast Selections
+                        Start Your Day Right, Delicious Breakfast Selections
                     </p>
                     <h1 data-aos="fade-up" className='text-3xl font-bold'>
                         Top Selections

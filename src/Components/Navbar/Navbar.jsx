@@ -4,22 +4,24 @@ import { IoMdSearch } from "react-icons/io";
 import { FaBlogger } from 'react-icons/fa6';
 import { FaCaretDown } from 'react-icons/fa';
 import DarkMode from "./DarkMode";
+import { Link } from 'react-router-dom';
+// Import Link from react-router-dom
 
 const Menu = [
     {
         id: 1,
         name: "Home",
-        link: "#",
+        link: "/Home",
     },
     {
         id: 2,
         name: "All Recipe",
-        link: "/AllRecipe",
+        link: "/all",
     },
     {
         id: 3,
         name: "Add Recipe",
-        link: "/#Add Recipe",
+        link: "/AddRecepie",
     },
     {
         id: 4,
@@ -31,20 +33,19 @@ const DropdownLinks = [
     {
         id: 1,
         name: "specials",
-        link: "/#",
+        link: "/TopItem",
     },
     {
         id: 2,
         name: "Drinks",
-        link: "/#",
+        link: "/Drink",
     },
     {
-        id: 3,
-        name: "Deserts",
-        link: "/#",
+        id: 5,
+        name: "Desert",
+        link: "/Desert",
     },
 ];
-
 
 const Navbar = () => {
     return (
@@ -54,7 +55,7 @@ const Navbar = () => {
                 <div className='container flex justify-between items-center'>
                     <div>
                         <a href='#' className='font-bold text-2xl sm:text-3xl flex gap-2'>
-                            <img src={Logo} alt='Logo' className="w-14 uppercase" />
+                            <img src={Logo} alt='Logo' className="w-20 flex-shrink-0 uppercase" /> {/* Increased width and added flex-shrink-0 */}
                             FloverHaven
                         </a>
                     </div>
@@ -72,23 +73,23 @@ const Navbar = () => {
                                 focus:border-primary
                                 dark:border-gray-500
                                 dark:bg-gray-800'
-
                             />
                             <IoMdSearch
                                 className='text-gray-50 group-hover:text-primary absolute top-1/2 -translate-y-1/2 right-3'
                             />
                         </div>
                     </div>
-                    {/* Order Button */}
-                    <button
-                        onClick={() => alert("Hurray Up Login")}
-                        className='bg-gradient-to-r from-primary to-secondary transition-all duration-200 text-white py-1 px-4 rounded-full flex items-center gap-3 group'
-                    >
-                        <span className='group-hover:block hidden transition-all duration-200'>
-                            Login
-                        </span>
-                        <FaBlogger className='text.xl text-white drop-shadow-sm cursor-pointer' />
-                    </button>
+                    {/* Login Button */}
+                    <Link to="/login"> {/* Link to the Login page */}
+                        <button
+                            className='bg-gradient-to-r from-primary to-secondary transition-all duration-200 text-white py-1 px-4 rounded-full flex items-center gap-3 group'
+                        >
+                            <span className='group-hover:block hidden transition-all duration-200'>
+                                Login
+                            </span>
+                            <FaBlogger className='text.xl text-white drop-shadow-sm cursor-pointer' />
+                        </button>
+                    </Link>
                     {/* Darkmode Switch */}
                     <div>
                         <DarkMode />
@@ -109,7 +110,7 @@ const Navbar = () => {
                             </a>
                         </li>
                     ))}
-                    {/* simple dropdown and links*/}
+                    {/* Dropdown */}
                     <li className='group relative cursor-pointer'>
                         <a
                             href='#'
@@ -119,8 +120,8 @@ const Navbar = () => {
                             <span>
                                 <FaCaretDown
                                     className="transition-all
-                             duration-200
-                             group-hover:rotate-180" />
+                                    duration-200
+                                    group-hover:rotate-180" />
                             </span>
                         </a>
                         <div className='absolute z-[9999] hidden group-hover:block w-[200px] rounded-md bg-white p-2 text-black shadow-md'>
@@ -132,7 +133,6 @@ const Navbar = () => {
                                         >{data.name}</a>
                                     </li>
                                 ))}
-
                             </ul>
                         </div>
                     </li>
@@ -140,6 +140,6 @@ const Navbar = () => {
             </div>
         </div>
     );
-}
+};
 
 export default Navbar;

@@ -55,6 +55,29 @@ const AddRecepie = () => {
                     />
                 </div>
 
+                {/* Recipe Category Dropdown */}
+                <div className="mb-6">
+                    <label
+                        htmlFor="category"
+                        className="block text-lg font-bold text-white mb-1"
+                    >
+                        Recipe Category
+                    </label>
+                    <select
+                        id="category"
+                        name="category"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 bg-white text-black"
+                        required
+                    >
+                        <option value="" disabled selected>
+                            Select a category
+                        </option>
+                        <option value="topitems">Top Items</option>
+                        <option value="drink">Drink</option>
+                        <option value="dessert">Dessert</option>
+                    </select>
+                </div>
+
                 {/* Content Textarea */}
                 <div className="mb-6">
                     <label
@@ -99,7 +122,6 @@ const AddRecepie = () => {
                     </div>
                 </div>
 
-
                 {/* Submit Button */}
                 <div className="flex justify-center">
                     <button
@@ -115,4 +137,3 @@ const AddRecepie = () => {
 };
 
 export default AddRecepie;
-
